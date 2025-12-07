@@ -1,4 +1,10 @@
 from datetime import datetime, timedelta
+import sys
+import os
+
+# Add parent directory to path to find pipelines module
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 from airflow import DAG
 from airflow.decorators import task, task_group
 from pipelines.weather import pipe_weather

@@ -354,12 +354,12 @@ if __name__ == "__main__":
     )
 
     for date in date_list:
-        # print(f"Processando data: {date}")
-        # weather_data = fetch_history_weather_data("Joinville", date)
-        # weather_data = format_history_weather_data(weather_data)
+        print(f"Processando data: {date}")
+        weather_data = fetch_history_weather_data("Joinville", date)
+        weather_data = format_history_weather_data(weather_data)
 
-        # print(f"{len(weather_data)} registros formatados")
+        print(f"{len(weather_data)} registros formatados")
 
-        # # delete_history_weather_data(date)
-        # insert_history_weather_data_into_database(weather_data)
-        # print("Dados inseridos no banco com sucesso!")
+        # delete_history_weather_data(date)
+        insert_history_weather_data_into_database(weather_data)
+        print("Dados inseridos no banco com sucesso!")

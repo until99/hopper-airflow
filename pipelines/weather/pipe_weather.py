@@ -347,19 +347,19 @@ if __name__ == "__main__":
     # delete_forecast_weather_data()
     # insert_forecast_weather_data_into_database(forecast_data)
 
-    start_date = "2025-10-30"
-    end_date = "2025-10-30"
-    date_list = (
-        pd.date_range(start=start_date, end=end_date).strftime("%Y-%m-%d").tolist()
-    )
+    # start_date = "2025-10-30"
+    # end_date = "2025-10-30"
+    # date_list = (
+    #     pd.date_range(start=start_date, end=end_date).strftime("%Y-%m-%d").tolist()
+    # )
 
-    for date in date_list:
-        print(f"Processando data: {date}")
-        weather_data = fetch_history_weather_data("Joinville", date)
-        weather_data = format_history_weather_data(weather_data)
+    # for date in date_list:
+    #     print(f"Processando data: {date}")
+    #     weather_data = fetch_history_weather_data("Joinville", date)
+    #     weather_data = format_history_weather_data(weather_data)
 
-        print(f"{len(weather_data)} registros formatados")
+    #     print(f"{len(weather_data)} registros formatados")
 
-        # delete_history_weather_data(date)
-        insert_history_weather_data_into_database(weather_data)
-        print("Dados inseridos no banco com sucesso!")
+    #     # delete_history_weather_data(date)
+    #     insert_history_weather_data_into_database(weather_data)
+    #     print("Dados inseridos no banco com sucesso!")

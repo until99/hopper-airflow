@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
-from airflow.sdk import DAG, task, task_group
+from airflow import DAG
+from airflow.decorators import task, task_group
 from pipelines.weather import pipe_weather
 from pipelines.powerbi import utils
 

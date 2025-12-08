@@ -8,8 +8,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from airflow import DAG
 from airflow.decorators import task, task_group
 from pipelines.weather import pipe_weather
-from pipelines.powerbi import utils
-
 
 @task
 def retrieve_history_weather_data():
@@ -77,7 +75,6 @@ with DAG(
     default_args={
         "depends_on_past": False,
         "retries": 0,
-        "retry_delay": timedelta(minutes=5),
     },
     description="A simple weather report DAG",
     schedule="0 3 * * *",
@@ -87,9 +84,5 @@ with DAG(
 ) as dag:
     hist = process_historical_weather_data()
     forecast = process_forecast_weather_data()
-    refresh = refresh_powerbi_dataset(
-        dataset_id="f857d834-69fc-4a0e-ae0f-9754ca2b9fd1",
-        group_id="4573631b-396d-407b-ad18-159686c837de",
-    )
 
     hist >> forecast # >> refresh

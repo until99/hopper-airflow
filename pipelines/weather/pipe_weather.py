@@ -342,6 +342,7 @@ def populate_historical_weather_data_by_date_range(
 
 
 if __name__ == "__main__":
+    pass
     # forecast_data = fetch_forecast_weather_data("Joinville")
     # forecast_data = format_forecast_weather_data(forecast_data)
     # delete_forecast_weather_data()

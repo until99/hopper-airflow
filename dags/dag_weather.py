@@ -92,4 +92,4 @@ with DAG(
         group_id="4573631b-396d-407b-ad18-159686c837de",
     )
 
-    hist >> forecast >> refresh
+    hist >> forecast # >> refresh

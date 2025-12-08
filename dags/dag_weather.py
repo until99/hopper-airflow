@@ -67,9 +67,9 @@ def process_forecast_weather_data():
     insert_forecast_weather_data_into_database(formatted_data)
 
 
-@task
-def refresh_powerbi_dataset(dataset_id: str, group_id: str) -> None:
-    utils.refresh_powerbi_dataset(dataset_id, group_id)
+# @task
+# def refresh_powerbi_dataset(dataset_id: str, group_id: str) -> None:
+#     utils.refresh_powerbi_dataset(dataset_id, group_id)
 
 
 with DAG(
